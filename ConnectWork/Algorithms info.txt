@@ -1,0 +1,96 @@
+Here are the algorithms used in our project:
+
+**Login page**
+
+1. MD5 Hashing: Used to generate a verification token for email verification.
+
+$verify_token = md5(rand());
+
+
+2. Password Hashing: Used to securely store passwords in the database using the password_hash() function with the PASSWORD_DEFAULT algorithm.
+
+
+$password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+
+3. Email Validation: Used to validate email format using filter_var() function with the FILTER_VALIDATE_EMAIL filter.
+
+if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    // Validate email format
+}
+
+
+**workers list**
+
+4. Linear Search: Used in the searchWorkers() function to search for workers based on the input search query.
+
+function searchWorkers() {
+    const input = document.getElementById('searchInput').value.toUpperCase();
+    const workerItems = document.querySelectorAll('.worker-item');
+    workerItems.forEach((item) => {
+        const area = item.dataset.area;
+        if (area.toUpperCase().indexOf(input) > -1) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+5. Filtering: Used in the filterWorkers() function to filter workers based on the selected work field.
+
+function filterWorkers(workField) {
+    const workerItems = document.querySelectorAll('.worker-item');
+    workerItems.forEach((item) => {
+        if (item.dataset.workField === workField) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+**Worker profile page**
+
+1. Hash Table (Associative Array): The PHP code uses the $_SESSION superglobal, which is an associative array that stores session data. This is an implementation of a hash table, allowing for efficient key-value lookups.
+
+2. Query String Parsing: The JavaScript code uses the URLSearchParams API to parse the URL query string, which involves tokenizing the string, identifying key-value pairs, and storing them in a data structure. This is an example of a parser algorithm.
+
+3. JSON Serialization and Deserialization: The code uses JSON (JavaScript Object Notation) to serialize and deserialize data between the server-side PHP script and the client-side JavaScript code. This involves algorithms for converting data structures to and from a string representation.
+
+4. Geographic Information System (GIS) Algorithms: The Leaflet library, used for displaying the map, employs various GIS algorithms, such as:
+Spatial indexing: for efficient querying and rendering of map tiles
+Map projection: for converting geographic coordinates to 2D screen coordinates
+Tile caching: for optimizing map rendering and reducing server requests
+
+5. Event-Driven Programming: The JavaScript code uses event listeners to respond to user interactions, such as clicks and hover events. This is an example of an event-driven programming paradigm, where the program's flow is determined by user interactions.
+
+6. State Machine: The code uses a simple state machine to manage the dropdown menu's visibility, toggling it on and off based on user clicks. This involves maintaining a state variable and transitioning between states based on user input.
+These algorithms are used to create a dynamic web page that displays a worker's profile information, including a map, and allows users to interact with the page.
+
+** user details update page**
+
+1. File Upload Handling: The code uses the move_uploaded_file() function to handle file uploads, which involves validating the file, checking for errors, and moving the file to a target directory. This is an example of a file I/O algorithm.
+
+2. Image Processing: The code uses the getimagesize() function to validate the uploaded file as an image, which involves reading the file's metadata and checking for specific properties. This is an example of an image processing algorithm.
+
+3. Database Querying: The code uses the mysqli extension to interact with a MySQL database, which involves constructing SQL queries, executing them, and handling the results. This is an example of a database querying algorithm.
+
+4. Prepared Statements: The code uses prepared statements with the mysqli extension to execute SQL queries, which involves parameterizing the query, binding values to placeholders, and executing the query. This is an example of a prepared statement algorithm.
+
+** HOME PAGE **
+
+1. Isotope Algorithm: The code uses the Isotope library, which employs a bin packing algorithm to layout and arrange elements in a grid. This algorithm is used to create a responsive and dynamic grid layout.
+
+2. Swiper Algorithm: The code uses the Swiper library, which employs a carousel algorithm to manage the slideshow and navigation. This algorithm is used to create a responsive and interactive slideshow.
+
+3. AOS (Animate On Scroll) Algorithm: The code uses the AOS library, which employs a scroll-based animation algorithm to animate elements as they come into view. This algorithm is used to create a dynamic and interactive scrolling experience.
+
+4. Glightbox Algorithm: The code uses the Glightbox library, which employs a lightbox algorithm to display images and videos in a modal window. This algorithm is used to create a responsive and interactive lightbox experience.
+
+5. Scroll Event Handling: The code uses event listeners to handle scroll events, which involves tracking the scroll position and triggering actions when certain conditions are met. This is an example of an event-driven programming paradigm.
+
+6. ** Debouncing Algorithm**: The code uses a debouncing algorithm to limit the frequency of scroll event handling, which involves delaying the execution of a function until a certain amount of time has passed since the last event.
+
+7. Throttling Algorithm: The code uses a throttling algorithm to limit the frequency of scroll event handling, which involves limiting the number of times a function can be executed within a certain time window.
+

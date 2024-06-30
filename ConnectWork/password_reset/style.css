@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, rgba(236, 49, 49, 0.418), rgba(255, 255, 255, 0.507),rgba(0, 115, 255, 0.274) , rgba(75, 168, 9, 0.432) );
+}
+#containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.253),
+  inset 0 0 13px 2px rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+#submit {
+  /* margin-top: 30px; */
+  position: relative;
+  bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+button {
+  font-family: monospace;
+  background-color: #34c5ed;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  width: 100px;
+  height: 45px;
+  transition: .3s;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+  color: #fff;
+}
+
+.input-container {
+  position: relative;
+  margin: 50px auto;
+  width: 200px;
+  bottom: 40px;
+}
+
+.input-container input[type="email"] {
+  font-size: 20px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 5px 0;
+  background-color: transparent;
+  outline: none;
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000000;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="email"]:focus ~ .label,
+.input-container input[type="email"]:valid ~ .label {
+  top: -20px;
+  font-size: 19px;
+  color: #0b4eb4;
+  font-weight: 400;
+}
+
+.input-container .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #000000;
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="email"]:focus ~ .underline,
+.input-container input[type="email"]:valid ~ .underline {
+  transform: scaleX(1);
+}
+
