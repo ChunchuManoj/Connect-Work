@@ -30,8 +30,8 @@ function sendemail_verify($name,$email,$verify_token){
     $mail->SMTPAuth = true;
 
     $mail->Host = "smtp.gmail.com";
-    $mail->Username = "connectwork789@gmail.com";
-    $mail->Password = "gqzvkgfiyvysujwt";
+    $mail->Username = "email@gmail.com"; // add your email 
+    $mail->Password = ""; //add your email two-factor authontication app password
     
     $mail->SMTPSecure = "tls";
     $mail->Port = 587;
